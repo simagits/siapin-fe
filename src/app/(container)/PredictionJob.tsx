@@ -1,10 +1,15 @@
 import NextImage from "@/components/NextImage";
 import Typography from "@/components/Typography";
 import Button from "@/components/buttons/Button";
+import Link from "next/link";
+
 
 export default function PredictionJob() {
   return (
-    <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+    <div
+      className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center"
+      id="job-trend"
+    >
       {/* Left Illustration */}
       <div className="relative flex justify-center">
         <NextImage
@@ -43,7 +48,9 @@ export default function PredictionJob() {
         </Typography>
         <div>
           <Button variant="blue" size="sm" className="px-8 py-3 font-semibold">
+            <Link href="/job-trend">
             Lihat Prediksi
+            </Link>
           </Button>
         </div>
       </div>

@@ -2,7 +2,7 @@ import Typography from "@/components/Typography";
 
 export default function StatsSection() {
   return (
-    <div className="max-w-6xl mx-auto flex flex-col items-center">
+    <div className="max-w-6xl mx-auto flex flex-col items-center" id="about">
       {/* Stats */}
       <div className="bg-white rounded-2xl shadow-md p-6 flex flex-wrap justify-center gap-8 translate-y-14">
         {[

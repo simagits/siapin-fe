@@ -23,14 +23,14 @@ export default function Navbar() {
           <Link href="/" className="text-teal-600 font-semibold">
             Home
           </Link>
-          <Link href="/about" className="text-blue-900 hover:text-teal-600">
+          <Link href="#about" className="text-blue-900 hover:text-teal-600">
             About
           </Link>
-          <Link href="/job-trend" className="text-blue-900 hover:text-teal-600">
+          <Link href="#job-trend" className="text-blue-900 hover:text-teal-600">
             Job Trend
           </Link>
           <Link
-            href="/skill-check"
+            href="#skill-check"
             className="text-blue-900 hover:text-teal-600"
           >
             Skill Check
@@ -42,16 +42,22 @@ export default function Navbar() {
             {/* Dropdown */}
             <div className="absolute left-0 mt-2 hidden group-hover:block bg-white rounded-lg shadow-lg py-2">
               <Link
-                href="/karierku/profile"
+                href="/karierku/path-generator"
                 className="block px-4 py-2 hover:bg-gray-100"
               >
-                Profile
+                Carrier Path Generator
               </Link>
               <Link
-                href="/karierku/history"
+                href="/karierku/salary-prediction"
                 className="block px-4 py-2 hover:bg-gray-100"
               >
-                History
+                Salary Prediction
+              </Link>
+              <Link
+                href="/karierku/ai-cv/review"
+                className="block px-4 py-2 hover:bg-gray-100"
+              >
+                AI CV Review
               </Link>
             </div>
           </div>
@@ -62,20 +68,24 @@ export default function Navbar() {
 
         {/* Auth Buttons */}
         <div className="flex items-center space-x-3">
-          <Button
-            variant="ghost"
-            size="sm"
-            className="text-white bg-blue-900 px-4 py-2 rounded-md"
-          >
-            Login
-          </Button>
-          <Button
-            variant="outline"
-            size="sm"
-            className="border border-blue-900 text-blue-900 px-4 py-2 rounded-md"
-          >
-            Sign Up
-          </Button>
+          <Link href="/auth/login" className="w-fit h-fit">
+            <Button
+              variant="ghost"
+              size="sm"
+              className="text-white bg-blue-900 px-4 py-2 rounded-md"
+            >
+              Login
+            </Button>
+          </Link>
+          <Link href="/auth/register" className="w-fit h-fit">
+            <Button
+              variant="outline"
+              size="sm"
+              className="border border-blue-900 text-blue-900 px-4 py-2 rounded-md"
+            >
+              Sign Up
+            </Button>
+          </Link>
         </div>
       </div>
     </header>

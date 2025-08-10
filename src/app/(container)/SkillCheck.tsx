@@ -4,7 +4,10 @@ import Button from "@/components/buttons/Button";
 
 export default function SkillCheck() {
   return (
-    <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8  justify-center items-center">
+    <div
+      className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8  justify-center items-center"
+      id="skill-check"
+    >
       {/* Left Content */}
       <div className="flex flex-col justify-center text-center md:text-left space-y-4">
         <Typography

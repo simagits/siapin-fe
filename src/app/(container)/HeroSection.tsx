@@ -2,6 +2,7 @@ import NextImage from "@/components/NextImage";
 import Typography from "@/components/Typography";
 import Button from "@/components/buttons/Button";
 
+
 export default function HeroSection() {
   return (
     <section className="flex flex-row h-full w-full items-center justify-center p-8 bg-gradient-to text-white">
