@@ -1,19 +1,31 @@
 import "./globals.css";
 
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 
 import Providers from "@/app/providers";
-
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+import { Montserrat_Alternates, Poppins } from "next/font/google";
 
 export const metadata: Metadata = {
   title: {
-    default: "Nextjs Starter Template",
-    template: "%s | Nextjs Starter Template",
+    default: "Siapin | Siap Hadapi Dunia Kerja",
+    template: "%s | Siapin | Siap Hadapi Dunia Kerja",
   },
-  description: "Nextjs 14.2.1 + Tailwind CSS starter template",
+  description: "Siapin | Siap Hadapi Dunia Kerja",
 };
+
+// Montserrat Alternates
+const montserrat = Montserrat_Alternates({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-montserrat-alternates",
+});
+
+// Poppins
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-poppins",
+});
 
 export default function RootLayout({
   children,
@@ -21,8 +33,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className="light">
+      <body className={`${montserrat.variable} ${poppins.variable}`}>
         <Providers>{children}</Providers>
       </body>
     </html>

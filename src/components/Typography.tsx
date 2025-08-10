@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import clsxm from "@/lib/clsxm";
+import clsxm from "@/lib/cn";
 
 export enum TypographyVariant {
   h1,
@@ -13,7 +13,8 @@ export enum TypographyVariant {
 }
 
 enum FontVariant {
-  Inter,
+  montserratAlternates,
+  poppins,
 }
 
 enum FontWeight {
@@ -42,7 +43,7 @@ export default function Typography<T extends React.ElementType>({
   children,
   weight = "regular",
   className,
-  font = "Inter",
+  font = "montserratAlternates",
   variant = "p",
   ...props
 }: TypographyProps<T> &
@@ -54,12 +55,18 @@ export default function Typography<T extends React.ElementType>({
         // *=============== Font Type ==================
         "text-black",
         [
-          font === "Inter" && [
-            "font-inter",
+          font === "montserratAlternates" && [
+            "font-montserrat-alternates",
             [
               weight === "regular" && "font-normal",
               weight === "medium" && "font-medium",
               weight === "bold" && "font-bold",
+              weight === "extrabold" && "font-extrabold",
+              weight === "thin" && "font-thin",
+              weight === "extralight" && "font-extralight",
+              weight === "light" && "font-light",
+              weight === "semibold" && "font-semibold",
+              weight === "black" && "font-black",
             ],
           ],
         ],

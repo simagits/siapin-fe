@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 import Typography from "@/components/Typography";
-import clsxm from "@/lib/clsxm";
+import clsxm from "@/lib/cn";
 
 export default function LabelText({
   children,
